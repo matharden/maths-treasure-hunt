@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Quiz</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #result {
+      position: absolute;
+      top: 25%;
+      text-align: center;
+      width: 100%;
+    }
+    #step {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-align: right;
+    }
+    span,
+    input {
+      display: inline-block;
+      width: 150px;
+    }
+    /* span:last-of-type::after {
+      content: '=';
+    } */
+  </style>
+</head>
+<body>
+<div id="result"></div>
+<div id="step"></div>
+<form>
+  <span id="one"></span>
+  <span id="operator"></span>
+  <span id="two"></span>
+  <input type="text" id="answer">
+</form>
+<script src="quiz.js"></script>
+</body>
+</html>
