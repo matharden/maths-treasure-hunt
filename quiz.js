@@ -1,10 +1,3 @@
-var questions = [
-  [10,'/',2],
-  [2,'*',5],
-  [4,'+',3],
-  [4,'*',3]
-];
-
 var level = 0;
 
 var one = document.querySelector('#one');
