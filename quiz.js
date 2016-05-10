@@ -28,21 +28,20 @@ var setQuestion = function(question) {
   step.innerHTML = (level + 1) + '/' + questions.length;
 };
 
-var calculate = function(q) {
-  if (q[1] === '*' || q[1].toLowerCase() === 'x') {
-    return q[0] * q[2];
-  } else if (q[1] === '/') {
-    return q[0] / q[2];
-  } else if (q[1] === '+') {
-    return q[0] + q[2];
-  } else if (q[1] === '-') {
-    return q[0] - q[2];
-  }
+var calculate = {
+  '+': function(x, y) { return x + y },
+  '-': function(x, y) { return x - y },
+  '*': function(x, y) { return x * y },
+  '/': function(x, y) { return x / y }
+};
+
+var product = function(q) {
+  return calculate[q[1]](q[0], q[2]);
 };
 
 quiz.addEventListener('submit', function(e){
   e.preventDefault();
-  if (calculate(questions[level]) === parseInt(answer.value)) {
+  if (product(questions[level]) === parseInt(answer.value)) {
     result.innerHTML = 'Correct';
     level++;
     if (level < questions.length) {
