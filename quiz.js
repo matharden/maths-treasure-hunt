@@ -1,6 +1,6 @@
 let currentQuestion, currentForm;
 
-const messege = document.querySelector('#messege');
+const message = document.querySelector('#message');
 const clue = document.querySelector('#clue');
 const codeform = document.querySelector('#codeform');
 const code = codeform.querySelector('#code');
@@ -41,9 +41,9 @@ const calculate = {
 const product = q => calculate[q[1]](q[0], q[2]);
 
 const showMsg = msg => {
-  messege.innerText = msg;
-  messege.classList.add('show');
-  setTimeout(() => messege.classList.remove('show'), 3000);
+  message.innerText = msg;
+  message.classList.add('show');
+  setTimeout(() => message.classList.remove('show'), 3000);
 };
 
 const setMode = mode => {
@@ -101,4 +101,3 @@ codeform.addEventListener('submit', e => {
 document.body.addEventListener('click', () => currentForm.focus());
 
 setMode(1);
-// setQuestion(questions[level]);
