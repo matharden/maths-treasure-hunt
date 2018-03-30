@@ -1,7 +1,6 @@
 let currentQuestion;
 
 const messege = document.querySelector('#messege');
-const nextclue = document.querySelector('#nextclue');
 const clue = document.querySelector('#clue');
 const codeform = document.querySelector('#codeform');
 const code = codeform.querySelector('#code');
@@ -52,21 +51,21 @@ const setMode = mode => {
     case 1:
       // Show code.
       codeform.removeAttribute('hidden');
-      nextclue.setAttribute('hidden', 1);
+      clue.setAttribute('hidden', 1);
       puzzle.setAttribute('hidden', 1);
       code.focus();
       break;
     case 2:
       // Show puzzle.
       codeform.setAttribute('hidden', 1);
-      nextclue.setAttribute('hidden', 1);
+      clue.setAttribute('hidden', 1);
       puzzle.removeAttribute('hidden');
       answer.focus();
       break;
     case 3:
       // Show clue.
       codeform.removeAttribute('hidden');
-      nextclue.removeAttribute('hidden');
+      clue.removeAttribute('hidden');
       puzzle.setAttribute('hidden', 1);
       code.value = '';
       code.focus();

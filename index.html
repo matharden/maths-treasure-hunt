@@ -66,19 +66,29 @@
       transform: translateY(0) !important;
       transition: transform .3s !important;
     }
-    #nextclue {
-      font-size: 30%;
-      margin: 1em 0;
+    #clue {
+      font-size: .6em;
+      position: relative;
+      margin: .3em 0;
+    }
+    #clue::before {
+      content: 'Clue';
+      position: absolute;
+      font-size: .5em;
+      transform: rotateZ(340deg);
+      left: -1em;
+      top: -0.4em;
+      opacity: 0.5;
     }
   </style>
 </head>
 <body>
 
-<p id="messege">Hello</p>
+<p id="messege"></p>
 
 <main>
 
-  <p id="nextclue" hidden>Find code at: <span id="clue"></span></p>
+  <p id="clue" hidden></p>
 
   <form id="codeform">
     <input type="text" id="code" autocomplete="off" maxlength="4" placeholder="code">
