@@ -1,4 +1,4 @@
-let currentQuestion;
+let currentQuestion, currentForm;
 
 const messege = document.querySelector('#messege');
 const clue = document.querySelector('#clue');
@@ -54,6 +54,7 @@ const setMode = mode => {
       clue.setAttribute('hidden', 1);
       puzzle.setAttribute('hidden', 1);
       code.focus();
+      currentForm = code;
       break;
     case 2:
       // Show puzzle.
@@ -61,6 +62,7 @@ const setMode = mode => {
       clue.setAttribute('hidden', 1);
       puzzle.removeAttribute('hidden');
       answer.focus();
+      currentForm = answer;
       break;
     case 3:
       // Show clue.
@@ -69,6 +71,7 @@ const setMode = mode => {
       puzzle.setAttribute('hidden', 1);
       code.value = '';
       code.focus();
+      currentForm = code;
       break;
   }
 };
@@ -94,6 +97,8 @@ codeform.addEventListener('submit', e => {
     showMsg('incorrect code');
   }
 });
+
+document.body.addEventListener('click', () => currentForm.focus());
 
 setMode(1);
 // setQuestion(questions[level]);
