@@ -10,7 +10,7 @@ None. Just open `index.html` in your browser (double click it).
 
 Open `questions.js` to edit the maths questions and set clues.
 
-First set a random unique code, e.g. `1243`. Then set your maths question e.g. `1, '+', 2`. Finally, enter the clue to be shown when the correct answer is entered e.g. `Under desk`.
+First set a random unique code, e.g. `1243`. Then set your maths question, e.g. `1, '+', 2`. Finally, enter the clue to be shown when the correct answer is entered, e.g. `Under the desk`.
 
 ```javascript
 var codedquestions = {
@@ -19,7 +19,9 @@ var codedquestions = {
 ]
 ```
 
-Suit the clues to you own needs, then hide the next code in that location. E.g. `1379` should be hidden "Under the desk". Make the clues as difficult and as cryptic as you like.
+Hide the next code in that location, e.g. `1379` should be hidden "Under the desk". 
+
+Suit the clues to your own needs, make them as difficult and as cryptic as you like.
 
 ## Maths questions
 
